@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resources :users, only: [:create, :show]
       post '/login', to: 'sessions#login'
       delete '/logout', to: 'sessions#logout'
+      post '/refresh_token', to: 'tokens#refresh_token'
     end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
